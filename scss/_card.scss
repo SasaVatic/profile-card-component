@@ -1,0 +1,84 @@
+.card {
+  max-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+
+  .card-bg-pattern-box {
+    background: url(../images/bg-pattern-card.svg);
+    position: relative;
+    height: 140px;
+    border-radius: 10px 10px 0 0;
+    animation-name: slide-down;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+
+    img {
+      position: absolute;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 62%;
+      z-index: 10000;
+    }
+  }
+
+  .content-box {
+    text-align: center;
+    padding-top: 5rem;
+    background-color: hsl(0, 0, 100%);
+    border-radius: 0 0 10px 10px;
+    animation-name: slide-up;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+
+    span,
+    h3 {
+      font-weight: 400;
+      color: $font-color-secondary;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+
+    h3 {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .stats-box {
+      border-top: 1px solid hsl(0, 0%, 85%);
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 2rem 3rem 1.2rem 3rem;
+
+      .stat {
+        p {
+          font-size: 0.7rem;
+          letter-spacing: 2px;
+          color: $font-color-secondary;
+          line-height: 3;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    padding-top: 0;
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100vh);
+  }
+}
